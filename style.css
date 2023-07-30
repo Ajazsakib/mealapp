@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.btn {
+    border: 0;
+    width: 120px;
+    height: 40px;
+    font-weight: 600;
+    color: #000000;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.btn:focus{
+    outline: 0;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 60px
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+.form-control {
+    width: 75%;
+    height: 40px;
+    border: 1px solid #ededed;
+    padding-left: 16px;
+}
+.form-control:focus{
+    outline: 0;
+}
+
+.btn-favourite{
+    background-color: #ffc800;
+}
+.suggestion {
+    padding: 30px 60px;
+}
+.product-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.product-list .product-details{
+    flex: 0 0 23%;
+    margin: 0 10px 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07),
+        0 10px 20px -2px rgba(0, 0, 0, 0.04);
+}
+.product-list .product-details img {
+    width: 100%;
+    max-height: 180px;
+    cursor: pointer;
+}
+.product-list .product-details .text {
+    padding: 16px;
+    text-align: left;
+    line-height: 24px;
+}
+.product-list .product-details .text div {
+    margin-bottom: 16px;
+}
+.product-list .product-details .text .name {
+    font-size: 16px;
+    font-weight: 600;
+}
+.product-list .product-details .text .instruction {
+    font-size: 14px;
+    font-weight: 500;
+}
+.product-list .product-details .text button {
+    display: block;
+    width: 100%;
+    background-color: #ffc800;
+    color: #000000;
+    font-weight: 600;
+}
+.product-list .product-details .text button:disabled{
+    background-color: #ccc;
+    color: #888;
+    cursor: not-allowed;
+}
+/*Design for favrouite item page*/
+.favrouite-section {
+    padding: 30px 60px;
+}
+
+.favrouite-item-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+.favrouite-item-list .favrouite-item {
+    flex: 0 0 23%;
+    margin: 0 10px 30px;
+    background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07),
+            0 10px 20px -2px rgba(0, 0, 0, 0.04);
+}
+.favrouite-item-list .favrouite-item img {
+    width: 100%;
+}
+
+.favrouite-item-list .favrouite-item .text {
+    padding: 16px;
+    line-height: 24px;
+}
+.favrouite-item-list .favrouite-item .text div {
+    margin-bottom: 16px;
+}
+.btn-remove {
+    background-color: #ffc800;
+    display: block;
+    width: 100%;
+}
+.favrouite-item-list .favrouite-item .text .name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.favrouite-item-list .favrouite-item .text .instruction {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* css for single product detail*/
+.single-product-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+#single-product-details{
+    padding: 30px 60px;
+}
+.single-product-details .img {
+    width: 48%;
+}
+.single-product-details .img img {
+    width: 100%;
+    max-height: 400px;
+}
+.single-product-details .text {
+    width: 48%;
+}
+.single-product-details .text .name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+.single-product-details .text .instruction {
+    font-weight: 400;
+    text-align: justify;
+}

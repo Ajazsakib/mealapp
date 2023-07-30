@@ -4,10 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;0,700;0,900;1,100;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Javascript Search Meal App</title>
   </head>
   <body>
-    <h1>Meal App</h1>
+    <div class="header">
+      <div class="search">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter Food Name"
+          id="search"
+        />
+      </div>
+      <div class="favourite">
+        <a href="favroutieItem.html" class="btn btn-favourite">
+          Favourite<span id="count"></span>
+        </a>
+      </div>
+    </div>
+    <h1 id="loading"></h1>
+    <div class="suggestion" id="suggestion">
+      <div class="product-list" id="product-list">
+        <div class="product-details"></div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
