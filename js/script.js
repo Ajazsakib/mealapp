@@ -110,6 +110,6 @@ function getFavItemLen() {
 
 function showDetailPage(mealData) {
   console.log(mealData);
-  window.location.href = `/product-details.html`;
+  window.location.href = `https://ajazsakib.github.io/mealapp//product-details.html`;
   localStorage.setItem("product-detail", JSON.stringify(mealData));
 }
