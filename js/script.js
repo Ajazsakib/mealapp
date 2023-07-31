@@ -1,11 +1,12 @@
 var search = document.getElementById("search");
 var suggestion = document.getElementById("suggestion");
-// var foodList = [];
+
+// Code for search the meal
 search.addEventListener("input", handleSearch);
 var favItemList = JSON.parse(localStorage.getItem("favItem")) || [];
 
 async function handleSearch(e) {
-  if (search.value == "") {
+  if (search.value.trim() == "" || search.value.trim() == " ") {
     document.getElementById("product-list").innerHTML = "";
     document.getElementById("loading").innerHTML = "";
     return;
@@ -13,7 +14,7 @@ async function handleSearch(e) {
   document.getElementById("loading").innerHTML = "Loading...";
   try {
     var res = await fetch(
-      `https://www.themealdb.com/api/json/v1/1/search.php?s=${search.value}`,
+      `https://www.themealdb.com/api/json/v1/1/search.php?s=${search.value.trim()}`,
       {
         headers: {
           Accept: "application/json", // Set the Accept header to request JSON
@@ -27,7 +28,7 @@ async function handleSearch(e) {
       document.getElementById("loading").innerHTML = "";
     } else {
       document.getElementById("product-list").innerHTML =
-        "<p>No Result found</p>";
+        "<p style='text-align: center; width: 100%;'>No Result found</p>";
       document.getElementById("loading").innerHTML = "";
     }
   } catch (error) {
@@ -38,6 +39,7 @@ async function handleSearch(e) {
   }
 }
 
+// render the meal html page
 function renderMeal(data) {
   console.log(data);
   if (data) {
@@ -86,6 +88,7 @@ function renderMeal(data) {
   }
 }
 
+// function to add item as a favrouite item
 function handleFavouriteButtonClick(e) {
   var mealString = e.target.dataset.meal;
   var meal = JSON.parse(decodeURIComponent(mealString));

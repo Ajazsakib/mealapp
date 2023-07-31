@@ -1,8 +1,9 @@
 // script for favrouite page
 var favItemList = JSON.parse(localStorage.getItem("favItem")) || [];
 function renderFavrouiteItem() {
-  var storeFavIteMlist = favItemList.map(function (food) {
-    return `
+  if (favItemList.length > 0) {
+    var storeFavIteMlist = favItemList.map(function (food) {
+      return `
     <div class="favrouite-item">
           <div class="img">
             <img
@@ -18,10 +19,13 @@ function renderFavrouiteItem() {
           </div>
         </div>
       `;
-  });
+    });
 
-  document.getElementById("favrouite-item-list").innerHTML = storeFavIteMlist;
-
+    document.getElementById("favrouite-item-list").innerHTML = storeFavIteMlist;
+  } else {
+    document.getElementById("favrouite-item-list").innerHTML =
+      "<h1 style='text-align: center; width: 100%'>No Item In Favrouite</h1>";
+  }
   var removeFav = document.querySelectorAll(".remove-fav-btn");
 
   for (var i = 0; i < removeFav.length; i++) {
